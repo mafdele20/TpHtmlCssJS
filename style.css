@@ -70,7 +70,7 @@ h1{
 .loginbox input[type="submit"]:hover
 {
     cursor: pointer;
-    background: #ffc107;
+    background: white;
     color: #000;
 }
 .loginbox a{

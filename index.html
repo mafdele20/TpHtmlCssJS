@@ -2,21 +2,21 @@
 <head>
 <title>Login Form Design</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 <body>
-    <div class="loginbox">
+    <div class="loginbox" id ="loginbox">
     <img src="avatar.png" class="avatar">
         <h1>login</h1>
         <form>
+            <p id ="error-msg"></p>
             <p>Email</p>
-            <input type="email" name="" placeholder="Entrer votre email">
+            <input type="email" name="email" placeholder="Entrer votre email">
             <p>Password</p>
-            <input type="password" name="" placeholder="Entrer votre Password">
-            <input type="submit" name="" value="Login">
+            <input type="password" name="password" placeholder="Entrer votre Password">
+            <input type="submit" name="" value="Login" id ="login"  onclick="myFunction()">
             <a href="#">mot de passe oublié</a><br>
         </form>
-        
     </div>
-
 </body>
 </head>
 </html>
