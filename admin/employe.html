@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ouverture compte</title>
-     <link rel="stylesheet" href="client.css">
-     <script type="text/javascript" src="client.js"></script>
+     <link rel="stylesheet" href="../client/client.css">
+     <script type="text/javascript" src="admin.js"></script>
 </head>
 <body>
     <div class="compte">
         <nav class="navbar">
              <h4>GESTION CLIENT</h4>
             <ul>
-                <li><a href="typeClient.html"> Gestion type client </a></li>
-                <li><a href="client.html"> Gestion client </a></li>
+                <li><a href="agence.html"> Gestion Agences </a></li>
+                <li><a href="employe.html"> Gestion Employes </a></li>
             </ul>
         </nav>
         <div class="container">
@@ -36,13 +36,14 @@
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="typeclient">Type client</label>
+                  <label for="typeclient">Profil</label>
                 </div>
                 <div class="col-75">
-                  <select id="typeclient" name="typeclient">
-                    <option value="entreprise">Entreprise</option>
-                    <option value="salarie">Salarié</option>
-                    <option value="non_salarie">Non salarié</option>
+                  <select id="profil" name="profil">
+                    <option value="responsable">Responsable</option>
+                    <option value="caissier">Caissier</option>
+                    <option value="admin">Admin</option>
+                    <option value="charge">Chargé des comptes</option>
                   </select>
                 </div>
               </div>
@@ -71,14 +72,6 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-25">
-                  <label for="tel">Salaire</label>
-                </div>
-                <div class="col-75">
-                    <input type="number" id="tel" name="tel" >
-                </div>
-              </div>
-              <div class="row">
                 <input type="submit" value="Enregistrer">
               </div>
             </form>
@@ -89,10 +82,10 @@
               <tr>
                 <th>Nom</th>
                 <th>Prenom</th>
-                <th>type Client</th>
+                <th>Profil</th>
                 <th>Email</th>
                 <th>Téléphone</th>
-                <th>Salaire</th>
+    
               </tr>
               <tr>
                 <td>GADIAGA</td>
@@ -100,23 +93,14 @@
                 <td>Salarié</td>
                 <td>gadiaga@gmail.com</td>
                 <td>76 151 17 61</td>
-                <td>6000 €</td>
+         
               </tr>
               <tr>
-                <td>GADIAGA</td>
-                <td>Mafatime</td>
-                <td>Salarié</td>
-                <td>gadiaga@gmail.com</td>
-                <td>76 151 17 61</td>
-                <td>6000 €</td>
+          
               </tr>
               <tr>
-                <td>GADIAGA</td>
-                <td>Mafatime</td>
-                <td>Salarié</td>
-                <td>gadiaga@gmail.com</td>
-                <td>76 151 17 61</td>
-                <td>6000 €</td>
+
+
               </tr>
 
             </table>

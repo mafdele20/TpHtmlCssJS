@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ouverture compte</title>
-     <link rel="stylesheet" href="client.css">
-     <script type="text/javascript" src="client.js"></script>
+     <link rel="stylesheet" href="../client/client.css">
+     <script type="text/javascript" src="admin.js"></script>
 </head>
 <body>
     <div class="compte">
         <nav class="navbar">
-             <h4>GESTION TYPE CLIENT</h4>
+             <h4>Administration</h4>
             <ul>
-                <li><a href="typeClient.html"> Gestion type client </a></li>
-                <li><a href="client.html"> Gestion client </a></li>
+                <li><a href="agence.html"> Gestion Agences </a></li>
+                <li><a href="employe.html"> Gestion Employes </a></li>
             </ul>
         </nav>
         <div class="container">
@@ -21,7 +21,7 @@
 
               <div class="row">
                 <div class="col-25">
-                  <label for="libelle">libelle du type</label>
+                  <label for="libelle">Libelle</label>
                 </div>
                 <div class="col-75">
                   <input type="text" id="libelle" name="libelle" placeholder="Entrer le libelle">
@@ -30,7 +30,21 @@
 
               <div class="row">
                 <div class="col-25">
-                  <label for="code">Code type</label>
+                  <label for="typeclient">Region</label>
+                </div>
+                <div class="col-75">
+                  <select id="typeclient" name="typeclient">
+                    <option value="">Dakar</option>
+                    <option value="">St-Louis</option>
+                    <option value="">Fatick</option>
+                    <option value="">Diourbel</option>
+                    <option value="">Thies</option>
+R                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="code">Code Agence</label>
                 </div>
                 <div class="col-75">
                   <input type="text" id="code" name="code" disabled>
@@ -48,22 +62,26 @@
               <tr>
                 <th>Id</th>
                 <th>Libelle</th>
-                <th>Code</th>
+                <th>Region</th>
+                <th>CodeAgence</th>
               </tr>
               <tr>
                 <td>1</td>
-                <td>Salarié</td>
-                <td>sal_1_bank</td>
+                <td>BP Dakar</td>
+                <td>Dakar</td>
+                <td>BP_Dakar_0001</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>Entreprise</td>
-                <td>en_2_bank</td>
+                <td>BP Thies</td>
+                <td>Thies</td>
+                <td>BP_Thies_0002</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>Non_salarié</td>
-                <td>non_sal_3_bank</td>
+                <td>BP Diourbel</td>
+                <td>Diourbel</td>
+                <td>BP_Dioubel_0002</td>             
               </tr>
 
             </table>
