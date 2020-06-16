@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ouverture compte</title>
+     <link rel="stylesheet" href="client.css">
+     <script type="text/javascript" src="client.js"></script>
+</head>
+<body>
+    <div class="compte">
+        <nav class="navbar">
+             <h4>GESTION TYPE CLIENT</h4>
+            <ul>
+                <li><a href="typeClient.html"> Gestion type client </a></li>
+                <li><a href="client.html"> Gestion client </a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <form action="/typeClientController.php">
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="libelle">libelle du type</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="libelle" name="libelle" placeholder="Entrer le libelle">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="code">Code type</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="code" name="code" disabled>
+                </div>
+              </div>
+           
+              <div class="row">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+
+          <div classe="tab" id="tabC">
+            <table>
+              <tr>
+                <th>Id</th>
+                <th>Libelle</th>
+                <th>Code</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Salarié</td>
+                <td>sal_1_bank</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Entreprise</td>
+                <td>en_2_bank</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Non_salarié</td>
+                <td>non_sal_3_bank</td>
+              </tr>
+
+            </table>
+          </div>
+          
+    </div>
+
+     
+</body>
+</html>
