@@ -21,28 +21,43 @@ function readForm(){
     return formdata;
 }
 function insertCompte(data){
- var tab   = document.getElementById("listecompte").getElementsByTagName("tbody")[0];
- var newCompte = tab.insertRow(tab.length);
- cell1 = newCompte.insertCell(0); 
- cell1.innerHTML = data.numCompte;
- cell2 = newCompte.insertCell(1); 
- cell2.innerHTML = data.numAgence;
- cell3 = newCompte.insertCell(2); 
- cell3.innerHTML = data.cleRib;
- cell4 = newCompte.insertCell(3); 
- cell4.innerHTML = data.nom;
- cell5 = newCompte.insertCell(4); 
- cell5.innerHTML = data.prenom;
- cell6 = newCompte.insertCell(5); 
- cell6.innerHTML = data.typeclient;
- cell7 = newCompte.insertCell(6); 
- cell7.innerHTML = data.email;
- cell8 = newCompte.insertCell(7); 
- cell8.innerHTML = data.tel;
- cell9 = newCompte.insertCell(8); 
- cell9.innerHTML = data.salaire;
- cell10 = newCompte.insertCell(9); 
- cell10.innerHTML = data.solde;
+    var tab   = document.getElementById("listecompte").getElementsByTagName("tbody")[0];
+    var newCompte = tab.insertRow(tab.length);
+    cell1 = newCompte.insertCell(0); 
+    cell1.innerHTML = data.numCompte;
+    cell2 = newCompte.insertCell(1); 
+    cell2.innerHTML = data.numAgence;
+    cell3 = newCompte.insertCell(2); 
+    cell3.innerHTML = data.cleRib;
+    cell4 = newCompte.insertCell(3); 
+    cell4.innerHTML = data.nom;
+    cell5 = newCompte.insertCell(4); 
+    cell5.innerHTML = data.prenom;
+    cell6 = newCompte.insertCell(5); 
+    cell6.innerHTML = data.typeclient;
+    cell7 = newCompte.insertCell(6); 
+    cell7.innerHTML = data.email;
+    cell8 = newCompte.insertCell(7); 
+    cell8.innerHTML = data.tel;
+    cell9 = newCompte.insertCell(8); 
+    cell9.innerHTML = data.salaire;
+    cell10 = newCompte.insertCell(9); 
+    cell10.innerHTML = data.solde;
+
+
+}
+//Pour masquer les infos client  s'il existe:
+function masquerClient(){
+        
+        document.getElementById("masquer").style.display = "none";
+        document.getElementById("identifiant").style.display="block"
+}
+//Pour afficher les infos client s'il est nouveau :
+
+function afficheElement(){
+        
+    document.getElementById("masquer").style.display = "block";
+    document.getElementById("identifiant").style.display="none"
 
 
 }

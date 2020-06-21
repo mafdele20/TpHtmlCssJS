@@ -13,11 +13,28 @@
              <h4>GESTION CLIENT</h4>
             <ul>
                 <li><a href="compte.html"> Gestion des comptes</a></li>
-          
+                <li><a href="../index.html">Déconnexion</a></li>  
             </ul>
         </nav>
         <div class="container">
+            <div>
+                <input type="radio" id="nouveau" name="nouveau" value="nouveau" onclick="afficheElement()"/>
+                <label for="nouveau">Nouveau Client</label>
+              </div>
+              
+              <div>
+                <input type="radio" id="ancien" name="ancien" value="ancien" onclick="masquerClient()" />
+                <label for="ancien">Client existant</label>
+              </div>
             <form onsubmit="event.preventDefault(); addCompte();">
+                <div class="row" id="identifiant">
+                    <div class="col-25">
+                      <label for="idclient">Identifiant client</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="idclient" name="idclient" placeholder="Entrer l'id du client">
+                    </div>
+                  </div>
               <div class="row">
                 <div class="col-25">
                   <label for="numCompte">Numéro compte</label>
@@ -42,6 +59,8 @@
                   <input type="text" id="solde" name="solde" placeholder="Entrer le montant déposé">
                 </div>
               </div> 
+              <div>
+            <div id="masquer">
                <div class="row">
                 <div class="col-25">
                   <label for="nom">Nom</label>
@@ -64,6 +83,7 @@
                 </div>
                 <div class="col-75">
                   <select id="typeclient" name="typeclient">
+                    <option></option>
                     <option value="entreprise">Entreprise</option>
                     <option value="salarie">Salarié</option>
                     <option value="non_salarie">Non salarié</option>
@@ -102,6 +122,7 @@
                     <input type="number" id="salaire" name="salaire" >
                 </div>
               </div>
+            </div>
               <div class="form-action-buttons row">
                 <input type="submit" value="Enregistrer">
               </div>
