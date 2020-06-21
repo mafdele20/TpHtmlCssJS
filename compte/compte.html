@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ouverture compte</title>
-     <link rel="stylesheet" href="../client/client.css">
-     <script type="text/javascript" src="admin.js"></script>
+    <title>Gestion client</title>
+     <link rel="stylesheet" href="compte.css">
+     <script type="text/javascript" src="compte.js"></script>
 </head>
 <body>
     <div class="compte">
         <nav class="navbar">
              <h4>GESTION CLIENT</h4>
             <ul>
-                <li><a href="agence.html"> Gestion Agences </a></li>
-                <li><a href="employe.html"> Gestion Employes </a></li>
+                <li><a href="compte.html"> Gestion des comptes</a></li>
+          
             </ul>
         </nav>
         <div class="container">
-            <form action="/clientController.php">
+            <form onsubmit="event.preventDefault(); addCompte();">
               <div class="row">
+                <div class="col-25">
+                  <label for="numCompte">Numéro compte</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="numCompte" name="numCompte" placeholder="Entrer numéro compte">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="numAgence">Numéro Agence</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="numAgence" name="numAgence" placeholder="Entrer le numéro de l'agence">
+                </div>
+              </div> 
+              <div class="row">
+                <div class="col-25">
+                  <label for="solde">Dépot Initial</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="solde" name="solde" placeholder="Entrer le montant déposé">
+                </div>
+              </div> 
+               <div class="row">
                 <div class="col-25">
                   <label for="nom">Nom</label>
                 </div>
@@ -36,14 +60,13 @@
               </div>
               <div class="row">
                 <div class="col-25">
-                  <label for="typeclient">Profil</label>
+                  <label for="typeclient">Type client</label>
                 </div>
                 <div class="col-75">
-                  <select id="profil" name="profil">
-                    <option value="responsable">Responsable</option>
-                    <option value="caissier">Caissier</option>
-                    <option value="admin">Admin</option>
-                    <option value="charge">Chargé des comptes</option>
+                  <select id="typeclient" name="typeclient">
+                    <option value="entreprise">Entreprise</option>
+                    <option value="salarie">Salarié</option>
+                    <option value="non_salarie">Non salarié</option>
                   </select>
                 </div>
               </div>
@@ -72,36 +95,38 @@
                 </div>
               </div>
               <div class="row">
+                <div class="col-25">
+                  <label for="salaire">Salaire</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="salaire" name="salaire" >
+                </div>
+              </div>
+              <div class="form-action-buttons row">
                 <input type="submit" value="Enregistrer">
               </div>
             </form>
           </div>
 
           <div classe="tab" class="tab">
-            <table>
+            <table id="listecompte">
+            <thead>
               <tr>
+                <th>Numero</th>
+                <th>Agence</th>
+                <th>cléRib</th>
                 <th>Nom</th>
                 <th>Prenom</th>
-                <th>Profil</th>
+                <th>type Client</th>
                 <th>Email</th>
                 <th>Téléphone</th>
-    
+                <th>Salaire</th>
+                <th>Solde</th>
               </tr>
-              <tr>
-                <td>GADIAGA</td>
-                <td>Mafatime</td>
-                <td>Salarié</td>
-                <td>gadiaga@gmail.com</td>
-                <td>76 151 17 61</td>
-              </tr>
-              
-              <tr>
-          
-              </tr>
-              <tr>
-
-
-              </tr>
+            </thead>
+             <tbody>
+ 
+             </tbody>
 
             </table>
           </div>
