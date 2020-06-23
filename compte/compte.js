@@ -2,8 +2,7 @@
 function addCompte(){
     if(document.getElementById("numCompte").value.trim()=="" && document.getElementById("idclient").value.trim()==""
     && document.getElementById("numAgence").value.trim()=="" && document.getElementById("solde").value.trim()==""
-    && document.getElementById("dateO").value.trim()=="" && ((document.getElementById("epargne").checked == false && (document.getElementById("simple").checked == false || document.getElementById("xeweul").checked == false))
-    || document.getElementById("courant").checked == false ||document.getElementById("bloque").checked == false) ){
+    && document.getElementById("dateO").value.trim()==""){
        afficheTout()
     }else if(document.getElementById("numCompte").value.trim()==""){
 
@@ -54,8 +53,8 @@ function addCompte(){
     document.getElementById("champs4").style.display= "none";
     document.getElementById("champs2").style.display= "none";
 
-    }else if((document.getElementById("epargne").checked == false && (document.getElementById("simple").checked == false || document.getElementById("xeweul").checked == false))
-    || document.getElementById("courant").checked == false ||document.getElementById("bloque").checked == false  ){
+    }else if((document.getElementById("epargne").checked == false 
+    && document.getElementById("courant").checked == false && document.getElementById("bloque").checked == false )){
 
         document.getElementById("champs6").style.display= "block";
     
@@ -81,7 +80,6 @@ function afficheTout() {
     document.getElementById("champs3").style.display= "block";
     document.getElementById("champs4").style.display= "block";
     document.getElementById("champs2").style.display= "block";
-    document.getElementById("champs6").style.display= "block";
 
 }
 function annulTout() {
@@ -92,8 +90,6 @@ function annulTout() {
     document.getElementById("champs4").style.display= "none";
     document.getElementById("champs2").style.display= "none";
     document.getElementById("champs6").style.display= "none";
-    document.getElementById("epargnetype").style.display = "none"
-    document.getElementById("frais").style.display = "none"  
 
 }
 
@@ -181,8 +177,6 @@ function afficheElement(){
      document.getElementById("epargne").value ="";
      document.getElementById("courant").value ="";
      document.getElementById("bloque").value="";
-     document.getElementById("simple").checked = false
-     document.getElementById("xeweul").checked = false
      annulTout();
 
 }
@@ -205,7 +199,6 @@ function non_salary(){
     document.getElementById("salarie").checked = false           
 }
 function epargnee(){
-    document.getElementById("epargnetype").style.display = "block"
     document.getElementById("frais").style.display = "block"  
     document.getElementById("epargne").value ="epargne" 
     document.getElementById("courant").value =""
@@ -215,7 +208,6 @@ function epargnee(){
     document.getElementById("bloque").checked = false      
 }
 function courante(){
-    document.getElementById("epargnetype").style.display = "none"  
     document.getElementById("frais").style.display = "none"   
     document.getElementById("courant").value ="courant" 
     document.getElementById("epargne").value =""   
@@ -224,8 +216,7 @@ function courante(){
     document.getElementById("epargne").checked = false  
 }
 
-function bloquee(){  
-    document.getElementById("epargnetype").style.display = "none"   
+function bloquee(){    
     document.getElementById("frais").style.display = "block"   
     document.getElementById("bloque").value = "bloque"   
     document.getElementById("courant").value ="" 
